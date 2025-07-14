@@ -1,0 +1,269 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Paleta de cores hip‑hop harmonizada */
+:root {
+  --black: #1a1a1a;
+  --golden: #d4af37;
+  --purple: #6a0dad;
+  --gray: #3d3d3d;
+  --white: #f0f0f0;
+  --bgray: #6e6e6e;
+  --bgreen: #0d7200;
+}
+
+/* Estilo geral da página */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Cabeçalho */
+header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)),
+    url('../img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 0.5625rem;
+  text-align: center;
+  border-bottom: 0.0625rem solid var(--purple);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff5cede;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+/* Navegação principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+a:link {
+  color: #bfa200;
+}
+
+/* dourado escuro            */
+a:visited {
+  color: #c4a238;
+}
+
+/* dourado médio             */
+a:hover {
+  color: var(--golden);
+}
+
+/* Linha animada em hover */
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.125rem;
+  background: var(--golden);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -0.1875rem;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+  height: 0.0625rem;
+}
+
+/* Área principal */
+main {
+  padding: 3rem 1.5rem;
+}
+
+/* Sessão principal */
+section {
+  max-width: 56.25rem;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 0.625rem;
+  text-align: center;
+}
+
+/* Imagens responsivas dentro das seções */
+section img {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto 1.5rem;
+  border: 0.0625rem solid var(--purple);
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* Títulos das seções */
+section h1,
+section h2 {
+  color: var(--golden);
+  margin-bottom: 1rem;
+  font-size: 2.1875rem;
+  letter-spacing: 0.0625rem;
+}
+
+/* Subtítulos */
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
+}
+
+/* Parágrafos */
+section p {
+  font-size: 1.03125rem;
+  color: var(--white);
+  opacity: 0.95;
+}
+
+/* Listas */
+section ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+  text-align: left;
+}
+
+section li {
+  position: relative;
+  text-align: center;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+section li strong {
+  color: var(--golden);
+}
+
+/* Blocos de artistas */
+.Internacionais,
+.brasileiros {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 1.8rem;
+  margin: 2.5rem auto;
+  border: 0.125rem solid var(--gray);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.Internacionais {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+.Internacionais:hover {
+  transform: scale(1.02);
+  border-color: var(--golden);
+  box-shadow: 0 0 0.75rem var(--golden);
+}
+
+.brasileiros:hover {
+  transform: scale(1.02);
+  border-color: var(--golden);
+  box-shadow: 0 0 0.75rem var(--golden);
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--gray);
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 0.125rem solid var(--purple);
+  color: var(--white);
+  font-size: 0.95rem;
+  letter-spacing: 0.03125rem;
+}
+
+/* Linhas decorativas */
+hr {
+  border: none;
+  height: 0.7px;
+  background-color: #d4af3752;
+  margin: 15px auto;
+}
+
+.inter {
+  border: none;
+  height: 1px;
+  width: 65%;
+  background-color: var(--golden);
+  margin: 15px auto;
+}
+
+.titulo {
+  border: none;
+  height: 1.2px;
+  width: 36rem;
+  background-color: #bfa200;
+  margin: 15px auto;
+}
+
+.botoes {
+  text-align: center;     
+  margin: 40px auto;      
+  display: flex; 
+  justify-content: center;
+  gap: 16px;              
+}
+
+.botoes a {
+  padding: 10px 20px;        /* Espaçamento interno do botão (vertical e horizontal) */
+  background-color: #333;    /* Cor de fundo escura para o botão */
+  color: #b700ff;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  border-radius: 6px; 
+  display: inline-flex;
+  align-items: center; 
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+
+.botoes a:hover {
+  transform: translate(2px, 2px);
+  background-color: #33333395;
+  box-shadow: 2px 2px var(--golden);
+}
